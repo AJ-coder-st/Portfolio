@@ -1,9 +1,34 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Database, ShoppingCart, Heart, Palette } from "lucide-react";
+import { ExternalLink, Github, Database, ShoppingCart, Heart, Palette, Leaf } from "lucide-react";
 
 const projects = [
+  {
+    title: "🌾 Agri-Field Monitoring with Drone Images",
+    description: "Drone-based agricultural field monitoring system that analyzes aerial images to detect red-marked boundaries, extract crop field area, identify navigable paths, and generate overlays and statistical reports for better farm management.",
+    icon: Leaf,
+    technologies: [
+      "Python",
+      "Google Colab",
+      "OpenCV",
+      "scikit-image",
+      "Pillow",
+      "Matplotlib",
+      "HSV",
+      "LAB",
+      "Image Processing"
+    ],
+    features: [
+      "Drone image upload",
+      "Red boundary detection",
+      "Field segmentation (green)",
+      "Path detection (blue)",
+      "Interactive sensitivity tuning",
+      "Export overlays & reports"
+    ],
+    gradient: "bg-gradient-accent"
+  },
   {
     title: "Asset Management System with GPS",
     description: "Comprehensive asset tracking system with real-time GPS monitoring, inventory management, and automated reporting features.",
