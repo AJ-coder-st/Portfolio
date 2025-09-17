@@ -38,16 +38,32 @@ const Certifications = () => {
   const fetchCertificates = async () => {
     try {
       setLoading(true);
-      const API_BASE = (import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:3001';
-      const response = await fetch(`${API_BASE}/api/certificates`);
-      const data = await response.json();
-      if (data?.success && Array.isArray(data.certificates)) {
-        setCertificates(data.certificates as Certificate[]);
-      } else {
-        throw new Error(data?.error || 'Failed to fetch certificates');
-      }
+      // Frontend-only: list PDFs from public/certificates by trying known filenames
+      // Simpler: rely on a fixed list from the build (no backend)
+      const publicList = [
+        // Add your filenames here or generate at build time
+      ];
+      // If index.json exists, prefer it; otherwise render none (user will add)
+      try {
+        const res = await fetch('/certificates/index.json', { cache: 'no-store' });
+        if (res.ok) {
+          const json = await res.json();
+          const normalized = (json as any[]).map((c, i) => ({
+            id: `${i}-${c.filename}`,
+            name: c.name || c.filename,
+            filename: c.filename,
+            size: c.size || 0,
+            lastModified: c.date || new Date().toISOString(),
+            url: `/certificates/${c.filename}`,
+          }));
+          setCertificates(normalized);
+          return;
+        }
+      } catch {}
+      // Fallback: show nothing if no index.json
+      setCertificates([]);
     } catch (err) {
-      setError('Unable to connect to server. Please make sure the backend is running.');
+      setError('Unable to load certificates. Ensure public/certificates/index.json exists.');
       console.error('Error fetching certificates:', err);
     } finally {
       setLoading(false);
@@ -204,7 +220,7 @@ const Certifications = () => {
                         </DialogHeader>
                         <div className="mt-4">
                            <iframe
-                            src={`${((import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:3001')}${cert.url}`}
+                            src={cert.url}
                             className="w-full h-[70vh] border rounded-lg"
                             title={cert.name}
                           />
@@ -214,7 +230,7 @@ const Certifications = () => {
                     <Button 
                       variant="ghost" 
                       size="sm"
-                      onClick={() => window.open(`${((import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:3001')}${cert.url}`, '_blank')}
+                      onClick={() => window.open(cert.url, '_blank')}
                     >
                       <ExternalLink className="w-4 h-4" />
                     </Button>
@@ -242,7 +258,7 @@ const Certifications = () => {
                     variant="outline"
                     onClick={() => {
                       const link = document.createElement('a');
-                      link.href = `${((import.meta as any).env?.VITE_API_BASE_URL || 'http://localhost:3001')}${cert.url}`;
+                      link.href = cert.url;
                       link.download = cert.filename;
                       link.click();
                     }}

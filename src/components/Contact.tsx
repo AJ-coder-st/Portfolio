@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { sendEmailViaBackend } from "@/lib/emailjs";
+import { initEmailJS, sendEmail as sendEmailWithEmailJS } from "@/lib/emailjs";
 import { 
   Mail, 
   Phone, 
@@ -26,15 +26,20 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  // Initialize EmailJS once on mount
+  // Safe to call multiple times; underlying SDK guards it
+  // Ensures PUBLIC KEY is registered before send
+  useEffect(() => {
+    try { initEmailJS(); } catch {}
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {
-      // Send email via backend
-      const result = await sendEmailViaBackend(formData);
-      
-      if (result.success) {
+      try {
+        const result = await sendEmailWithEmailJS(formData);
+        if (result.success) {
         toast({
           title: "Message Sent Successfully!",
           description: "Thank you for your message. I'll get back to you within 24 hours!",
@@ -45,7 +50,7 @@ const Contact = () => {
         
         // Reset form
         setFormData({ name: '', email: '', message: '' });
-      } else {
+        } else {
         toast({
           title: "Failed to Send Message",
           description: result.message || "Please try again or contact me directly via email.",

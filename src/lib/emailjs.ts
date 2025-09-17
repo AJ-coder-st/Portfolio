@@ -1,16 +1,17 @@
 import emailjs from '@emailjs/browser';
 
-// EmailJS configuration
+// EmailJS configuration (read from env at build time)
 export const EMAILJS_CONFIG = {
-  // You'll need to replace these with your actual EmailJS credentials
-  SERVICE_ID: 'service_portfolio', // Replace with your service ID
-  TEMPLATE_ID: 'template_contact', // Replace with your template ID
-  PUBLIC_KEY: 'your_public_key_here', // Replace with your public key
+  SERVICE_ID: (import.meta as any).env?.VITE_EMAILJS_SERVICE_ID || '',
+  TEMPLATE_ID: (import.meta as any).env?.VITE_EMAILJS_TEMPLATE_ID || '',
+  PUBLIC_KEY: (import.meta as any).env?.VITE_EMAILJS_PUBLIC_KEY || '',
 };
 
 // Initialize EmailJS
 export const initEmailJS = () => {
-  emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+  if (EMAILJS_CONFIG.PUBLIC_KEY) {
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+  }
 };
 
 // Send email function
@@ -24,6 +25,11 @@ export const sendEmail = async (formData: {
       from_name: formData.name,
       from_email: formData.email,
       message: formData.message,
+      // extras to ensure they are available in your EmailJS template
+      subject: `Portfolio Contact - ${formData.name}`,
+      name: formData.name,
+      email: formData.email,
+      time: new Date().toLocaleString(),
       to_name: 'Bharath Waj M',
       reply_to: formData.email,
     };
