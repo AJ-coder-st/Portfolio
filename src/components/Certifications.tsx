@@ -40,8 +40,29 @@ const Certifications = () => {
       setLoading(true);
       // Frontend-only: list PDFs from public/certificates by trying known filenames
       // Simpler: rely on a fixed list from the build (no backend)
-      const publicList = [
-        // Add your filenames here or generate at build time
+      const publicList: string[] = [
+        "Accenture virtual internship.pdf",
+        "Bharath Waj Resume.pdf",
+        "Bharath+M_8136q97w8w.pdf.pdf",
+        "Bharathwaj M (1).pdf",
+        "Bharathwaj M (2).pdf",
+        "Bharathwaj M (3).pdf",
+        "Bharathwaj M.pdf",
+        "Boston consulitng group virtual internship.pdf",
+        "certificate (1).pdf",
+        "Certificate (2).pdf",
+        "CertificateOfCompletion_Microsoft Power BI Data Analyst Associate PL300 Cert Prep by Microsoft Press.pdf",
+        "CertificateOfCompletion_React Essential Training (1).pdf",
+        "CertificateOfCompletion_SQL Server 2022 Administration (1).pdf",
+        "CertificateOfCompletion_SQL Server Integration Services (1).pdf",
+        "goldman sachs certificate.pdf",
+        "Google analytics certification.pdf",
+        "IBMSkillsNetwork AI0117EN Certificate _ Cognitive Class.pdf",
+        "Roles and responsibilities_ImpTeam_Handout.pdf",
+        "TATA DATA Analyst virtual internship job simulation.pdf",
+        "UiPath Automation Developer Associate Training_Bharath waj waj_en-US_diploma (1).pdf",
+        "UiPath Automation Developer Associate Training_Bharath waj waj_en-US_diploma.pdf",
+        "UiPath Automation Implementation Methodology Fundamentals_Bharath waj waj_en-US_diploma.pdf",
       ];
       // If index.json exists, prefer it; otherwise render none (user will add)
       try {
@@ -60,8 +81,16 @@ const Certifications = () => {
           return;
         }
       } catch {}
-      // Fallback: show nothing if no index.json
-      setCertificates([]);
+      // Fallback: generate from the known list in public/certificates
+      const fallback = publicList.map((filename, i) => ({
+        id: `static-${i}-${filename}`,
+        name: filename.replace(/_/g, ' '),
+        filename,
+        size: 0,
+        lastModified: new Date().toISOString(),
+        url: `/certificates/${filename}`,
+      }));
+      setCertificates(fallback);
     } catch (err) {
       setError('Unable to load certificates. Ensure public/certificates/index.json exists.');
       console.error('Error fetching certificates:', err);
@@ -244,7 +273,7 @@ const Certifications = () => {
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{formatDate(cert.date)}</span>
+                    <span>{formatDate(cert.lastModified)}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <FileText className="w-4 h-4" />
