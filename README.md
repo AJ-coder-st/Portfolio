@@ -1,73 +1,215 @@
-# Welcome to your Lovable project
+# Bharath Waj M - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS, featuring a dynamic backend for serving certifications.
 
-**URL**: https://lovable.dev/projects/0df6ba8a-4086-4365-8002-bf5635c8c1c3
+## 🚀 Features
 
-## How can I edit this code?
+- **Modern UI/UX**: Clean, responsive design with smooth animations
+- **Dynamic Certifications**: Backend integration to serve certificates from local directory
+- **Interactive Components**: Hover effects, animations, and smooth transitions
+- **Mobile Responsive**: Optimized for all device sizes
+- **TypeScript**: Full type safety throughout the application
+- **Component Library**: Built with Radix UI and shadcn/ui components
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+### Frontend
+- React 18 with TypeScript
+- Vite for build tooling
+- Tailwind CSS for styling
+- Radix UI + shadcn/ui for components
+- React Query for data fetching
+- React Router for navigation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0df6ba8a-4086-4365-8002-bf5635c8c1c3) and start prompting.
+### Backend
+- Node.js with Express
+- CORS enabled for cross-origin requests
+- File system integration for serving certificates
+- RESTful API endpoints
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📁 Project Structure
 
-**Use your preferred IDE**
+```
+bharathwaj-creative-hub/
+├── src/
+│   ├── components/          # React components
+│   │   ├── ui/             # Reusable UI components
+│   │   ├── About.tsx       # About section
+│   │   ├── Certifications.tsx # Dynamic certifications
+│   │   ├── Contact.tsx     # Contact form
+│   │   ├── Education.tsx   # Education section
+│   │   ├── Experience.tsx  # Work experience
+│   │   ├── Hero.tsx        # Hero section
+│   │   ├── Navigation.tsx  # Navigation bar
+│   │   ├── Projects.tsx    # Projects showcase
+│   │   └── Skills.tsx      # Skills section
+│   ├── pages/              # Page components
+│   ├── assets/             # Static assets
+│   └── lib/                # Utility functions
+├── backend/                # Backend server
+│   ├── server.js          # Express server
+│   └── package.json       # Backend dependencies
+└── public/                # Public assets
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd bharathwaj-creative-hub
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install frontend dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Install backend dependencies**
+   ```bash
+   cd backend
+   npm install
+   cd ..
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Development
+
+#### Option 1: Start both servers separately
+```bash
+# Terminal 1 - Backend
+cd backend
+npm start
+
+# Terminal 2 - Frontend
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+#### Option 2: Start both servers together
+```bash
+npm run dev:full
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### Option 3: Use the batch script (Windows)
+```bash
+start-dev.bat
+```
 
-**Use GitHub Codespaces**
+### Production Build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+# Build frontend
+npm run build
 
-## What technologies are used for this project?
+# Start backend in production
+cd backend
+npm start
+```
 
-This project is built with:
+## 🔧 Configuration
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Backend Configuration
+The backend is configured to serve certificates from:
+```
+D:\bharath_resume\certificates
+```
 
-## How can I deploy this project?
+To change this path, modify the `certificatesPath` variable in `backend/server.js`:
 
-Simply open [Lovable](https://lovable.dev/projects/0df6ba8a-4086-4365-8002-bf5635c8c1c3) and click on Share -> Publish.
+```javascript
+const certificatesPath = 'YOUR_CERTIFICATES_PATH';
+```
 
-## Can I connect a custom domain to my Lovable project?
+### API Endpoints
 
-Yes, you can!
+- `GET /api/health` - Health check
+- `GET /api/certificates` - List all certificates
+- `GET /api/certificates/:filename` - Serve individual certificate file
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📱 Features Overview
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Hero Section
+- Animated background with floating elements
+- Smooth scroll indicators
+- Social media links
+
+### About Section
+- Professional profile with image
+- Animated statistics
+- Responsive layout
+
+### Skills Section
+- Categorized technical skills
+- Interactive skill cards
+- Language proficiency
+
+### Certifications Section
+- Dynamic loading from backend
+- PDF preview in modal
+- Download functionality
+- File size and date information
+
+### Experience & Education
+- Timeline-based layout
+- Detailed information cards
+- Responsive design
+
+### Projects Section
+- Project showcase with descriptions
+- Technology tags
+- Live demo links
+
+### Contact Section
+- Contact form with validation
+- Social media integration
+- Location information
+
+## 🎨 Customization
+
+### Colors
+The color scheme is defined in `src/index.css` using CSS custom properties:
+
+```css
+:root {
+  --primary: 217 91% 60%;
+  --secondary: 268 83% 58%;
+  --accent: 142 76% 36%;
+  /* ... */
+}
+```
+
+### Animations
+Custom animations are defined in the CSS file:
+- `animate-float` - Floating animation
+- `animate-fade-in` - Fade in effect
+- `animate-slide-in-left/right` - Slide animations
+- `animate-glow` - Glowing effect
+
+## 🚀 Deployment
+
+### Frontend (Vercel/Netlify)
+1. Build the project: `npm run build`
+2. Deploy the `dist` folder
+
+### Backend (Railway/Heroku)
+1. Deploy the `backend` folder
+2. Update the API URL in the frontend if needed
+
+## 📄 License
+
+This project is private and proprietary.
+
+## 👨‍💻 Author
+
+**Bharath Waj M**
+- Email: bharathwaj2912005@gmail.com
+- LinkedIn: [thebharathwaj](https://linkedin.com/in/thebharathwaj)
+
+---
+
+Built with ❤️ using React, TypeScript, and Tailwind CSS

@@ -50,14 +50,7 @@ const skillCategories = [
   }
 ];
 
-const certifications = [
-  "AWS Cloud Practitioner",
-  "Google Cloud Associate",
-  "MongoDB Developer",
-  "React Professional",
-  "Node.js Certification",
-  "Python for Data Science"
-];
+// Certifications are now handled by the separate Certifications component
 
 const languages = [
   { name: "Tamil", level: "Native" },
@@ -108,33 +101,9 @@ const Skills = () => {
           ))}
         </div>
         
-        {/* Certifications & Languages */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Certifications */}
-          <Card className="p-8 bg-gradient-card border-border/50 hover-lift transition-smooth">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 rounded-lg bg-gradient-accent glow-accent">
-                <Globe className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gradient-accent">
-                Certifications
-              </h3>
-            </div>
-            <div className="grid grid-cols-1 gap-3">
-              {certifications.map((cert, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-accent/10 hover:bg-accent/20 transition-smooth"
-                >
-                  <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-foreground">{cert}</span>
-                </div>
-              ))}
-            </div>
-          </Card>
-          
-          {/* Languages */}
-          <Card className="p-8 bg-gradient-card border-border/50 hover-lift transition-smooth">
+        {/* Languages */}
+        <div className="flex justify-center">
+          <Card className="p-8 bg-gradient-card border-border/50 hover-lift transition-smooth max-w-md w-full">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 rounded-lg bg-gradient-secondary glow-secondary">
                 <Globe className="w-5 h-5 text-white" />

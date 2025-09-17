@@ -16,6 +16,8 @@ const Hero = () => {
       {/* Floating elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-primary rounded-full opacity-20 animate-float"></div>
       <div className="absolute bottom-20 right-10 w-24 h-24 bg-gradient-secondary rounded-full opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-accent rounded-full opacity-15 animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-1/3 right-1/4 w-20 h-20 bg-gradient-hero rounded-full opacity-15 animate-float" style={{ animationDelay: '0.5s' }}></div>
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -34,7 +36,7 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
           <Button variant="hero" size="lg" className="group">
-            <Download className="w-5 h-5 group-hover:animate-bounce" />
+            <Download className="w-5 h-5 group-hover:animate-pulse" />
             View Resume
           </Button>
           <Button variant="glass" size="lg" className="group">

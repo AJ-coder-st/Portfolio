@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { sendEmailViaBackend } from "@/lib/emailjs";
 import { 
   Mail, 
   Phone, 
@@ -11,7 +12,9 @@ import {
   Linkedin, 
   Github, 
   Send,
-  MessageCircle 
+  MessageCircle,
+  CheckCircle,
+  XCircle
 } from "lucide-react";
 
 const Contact = () => {
@@ -27,16 +30,42 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    
-    setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
+    try {
+      // Send email via backend
+      const result = await sendEmailViaBackend(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for your message. I'll get back to you within 24 hours!",
+          action: (
+            <CheckCircle className="w-4 h-4 text-green-500" />
+          ),
+        });
+        
+        // Reset form
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        toast({
+          title: "Failed to Send Message",
+          description: result.message || "Please try again or contact me directly via email.",
+          action: (
+            <XCircle className="w-4 h-4 text-red-500" />
+          ),
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again or contact me directly.",
+        action: (
+          <XCircle className="w-4 h-4 text-red-500" />
+        ),
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
