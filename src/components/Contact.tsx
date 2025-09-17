@@ -241,7 +241,7 @@ const Contact = () => {
                 variant="hero" 
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full group"
+                className="w-full group text-primary-foreground"
               >
                 {isSubmitting ? (
                   <>

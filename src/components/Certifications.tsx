@@ -138,7 +138,8 @@ const Certifications = () => {
       'TATA': 'bg-red-500/20 text-red-400 border-red-500/30',
       'Boston Consulting': 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30',
       'IBM': 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
-      'Professional': 'bg-accent/20 text-accent border-accent/30'
+      // Use solid accent for best contrast in dark mode
+      'Professional': 'bg-accent text-accent-foreground border-transparent'
     };
     return colors[type] || colors['Professional'];
   };
