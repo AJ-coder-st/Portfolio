@@ -22,7 +22,7 @@ const About = () => {
               <img 
                 src={profilePhoto}
                 alt="Bharath Waj M"
-                className="relative w-80 h-80 object-cover rounded-2xl shadow-card hover-lift transition-smooth"
+                className="relative w-80 h-80 object-contain rounded-2xl shadow-card hover-lift transition-smooth bg-black/20 p-1"
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-smooth"></div>
             </div>

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Sun, Moon } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState<string>(() => localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,17 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
 
   const navItems = [
     { name: 'About', href: '#about' },
@@ -57,6 +69,9 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
+            <button onClick={toggleTheme} aria-label="Toggle theme" className="p-2 rounded-md hover:bg-muted/20 focus-visible:ring-2 focus-visible:ring-ring">
+              {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
             <Button variant="hero" size="sm" className="group">
               <Download className="w-4 h-4 group-hover:animate-bounce" />
               Resume
@@ -88,6 +103,10 @@ const Navigation = () => {
                   {item.name}
                 </button>
               ))}
+              <button onClick={toggleTheme} aria-label="Toggle theme" className="w-full flex items-center justify-center gap-2 p-2 rounded-md hover:bg-muted/20 focus-visible:ring-2 focus-visible:ring-ring">
+                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                {theme === 'dark' ? 'Light mode' : 'Dark mode'}
+              </button>
               <Button variant="hero" size="sm" className="w-full group mt-4">
                 <Download className="w-4 h-4 group-hover:animate-bounce" />
                 Download Resume

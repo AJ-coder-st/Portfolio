@@ -173,7 +173,7 @@ const Contact = () => {
                   <Linkedin className="w-5 h-5 text-white" />
                 </a>
                 <a 
-                  href="#"
+                  href="https://github.com/AJ-coder-st"
                   className="p-3 rounded-lg bg-gradient-secondary hover:glow-secondary transition-smooth hover-scale"
                 >
                   <Github className="w-5 h-5 text-white" />

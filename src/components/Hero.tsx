@@ -62,7 +62,7 @@ const Hero = () => {
             <Linkedin className="w-6 h-6" />
           </a>
           <a 
-            href="#"
+            href="https://github.com/AJ-coder-st"
             className="text-muted-foreground hover:text-primary transition-smooth hover-scale p-2 rounded-md focus-visible:ring-2 focus-visible:ring-ring"
             aria-label="GitHub"
           >
