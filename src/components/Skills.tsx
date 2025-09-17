@@ -13,6 +13,25 @@ import {
 
 const skillCategories = [
   {
+    title: "Data Analysis & Prompt Engineering",
+    icon: Database,
+    gradient: "bg-gradient-accent",
+    skills: [
+      "Data Analysis",
+      "Prompt Engineering",
+      "LLMOps",
+      "Prompt Evaluation",
+      "Token Management",
+      "OpenAI API",
+      "GPT-4 / Claude",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "scikit-learn",
+      "Power BI"
+    ]
+  },
+  {
     title: "Frontend Development",
     icon: Code2,
     gradient: "bg-gradient-primary",
