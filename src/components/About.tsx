@@ -3,13 +3,13 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="about" className="section">
+      <div className="section-inner">
+        <div className="section-header">
+          <h2 className="section-title">
             <span className="text-gradient-primary">About Me</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-subtitle">
             Passionate developer with expertise in full-stack development and modern technologies
           </p>
         </div>

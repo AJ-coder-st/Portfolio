@@ -19,7 +19,6 @@ const Navigation = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Certifications', href: '#certifications' },
     { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' }
   ];
@@ -33,7 +32,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-background/80 backdrop-blur-md shadow-card' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
@@ -53,7 +52,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-smooth hover-scale text-sm font-medium"
+                className="text-muted-foreground hover:text-primary transition-smooth hover:scale-105 text-sm font-medium px-2 py-1 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 {item.name}
               </button>
@@ -67,7 +66,10 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-muted/20 transition-smooth"
+            className="md:hidden p-2 rounded-lg hover:bg-muted/20 transition-smooth focus-visible:ring-2 focus-visible:ring-ring"
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -75,13 +77,13 @@ const Navigation = () => {
         
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border/50 shadow-card animate-fade-in">
+          <div id="mobile-nav" className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border/50 shadow-card animate-fade-in">
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-muted-foreground hover:text-primary transition-smooth py-2"
+                  className="block w-full text-left text-muted-foreground hover:text-primary transition-smooth py-2 rounded-md focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   {item.name}
                 </button>

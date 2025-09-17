@@ -112,13 +112,13 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="contact" className="section">
+      <div className="section-inner">
+        <div className="section-header">
+          <h2 className="section-title">
             <span className="text-gradient-hero">Get In Touch</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-subtitle">
             Let's collaborate on your next project or discuss opportunities
           </p>
         </div>
@@ -146,7 +146,7 @@ const Contact = () => {
                   <a
                     key={index}
                     href={info.href}
-                    className="flex items-center gap-4 p-4 rounded-lg bg-muted/20 hover:bg-muted/30 transition-smooth hover-scale group"
+                    className="flex items-center gap-4 p-4 rounded-lg bg-muted/20 hover:bg-muted/30 transition-smooth hover-scale group focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     <div className={`p-2 rounded-lg ${info.gradient} glow-primary`}>
                       <info.icon className="w-4 h-4 text-white" />

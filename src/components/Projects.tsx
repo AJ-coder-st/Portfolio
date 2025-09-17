@@ -40,13 +40,13 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="projects" className="section">
+      <div className="section-inner">
+        <div className="section-header">
+          <h2 className="section-title">
             <span className="text-gradient-accent">Featured Projects</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-subtitle">
             Showcasing innovative solutions built with modern technologies and best practices
           </p>
         </div>

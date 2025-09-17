@@ -31,13 +31,13 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="experience" className="section">
+      <div className="section-inner">
+        <div className="section-header">
+          <h2 className="section-title">
             <span className="text-gradient-secondary">Experience</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-subtitle">
             Professional journey through innovative companies and challenging projects
           </p>
         </div>

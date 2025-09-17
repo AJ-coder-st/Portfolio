@@ -116,13 +116,13 @@ const Certifications = () => {
 
   if (loading) {
     return (
-      <section id="certifications" className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <section id="certifications" className="section">
+        <div className="section-inner">
+          <div className="section-header">
+            <h2 className="section-title">
               <span className="text-gradient-primary">Certifications</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="section-subtitle">
               Professional certifications and achievements
             </p>
           </div>
@@ -142,13 +142,13 @@ const Certifications = () => {
 
   if (error) {
     return (
-      <section id="certifications" className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+      <section id="certifications" className="section">
+        <div className="section-inner">
+          <div className="section-header">
+            <h2 className="section-title">
               <span className="text-gradient-primary">Certifications</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="section-subtitle">
               Professional certifications and achievements
             </p>
           </div>
@@ -169,13 +169,13 @@ const Certifications = () => {
   }
 
   return (
-    <section id="certifications" className="py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+    <section id="certifications" className="section">
+      <div className="section-inner">
+        <div className="section-header">
+          <h2 className="section-title">
             <span className="text-gradient-primary">Certifications</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="section-subtitle">
             Professional certifications and achievements ({certificates.length} certificates)
           </p>
         </div>
