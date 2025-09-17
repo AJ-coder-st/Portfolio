@@ -238,7 +238,7 @@ const Contact = () => {
               
               <Button 
                 type="submit" 
-                variant="gradient" 
+                variant="hero" 
                 size="lg"
                 disabled={isSubmitting}
                 className="w-full group"

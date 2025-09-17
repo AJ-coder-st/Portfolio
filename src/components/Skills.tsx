@@ -137,7 +137,7 @@ const Skills = () => {
                   <span className="text-foreground font-medium">{lang.name}</span>
                   <Badge 
                     variant="secondary"
-                    className="bg-secondary/20 text-secondary border-secondary/30"
+                    className="bg-secondary text-secondary-foreground border-transparent"
                   >
                     {lang.level}
                   </Badge>

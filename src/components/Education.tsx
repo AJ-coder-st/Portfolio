@@ -53,7 +53,7 @@ const Education = () => {
               <div className="flex items-center gap-3">
                 <Award className="w-5 h-5 text-accent" />
                 <span className="text-foreground font-medium">CGPA: </span>
-                <Badge variant="secondary" className="bg-accent/20 text-accent border-accent/30">
+                <Badge variant="secondary" className="bg-accent text-accent-foreground border-transparent">
                   7.5 / 10.0
                 </Badge>
               </div>
