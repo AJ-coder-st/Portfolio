@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="inline-block rounded-2xl bg-black/40 backdrop-blur-sm px-6 py-5 shadow-card">
             <h1 className="text-5xl md:text-7xl font-bold mb-3 section-title">
-              <span className="text-gradient-hero">Bharath Waj M</span>
+              <span className="text-gradient-hero text-glow-soft">Bharath Waj M</span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground mb-2">
               Prompt Engineer | AIML & Data Science Enthusiast

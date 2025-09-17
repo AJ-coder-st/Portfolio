@@ -69,7 +69,7 @@ const Projects = () => {
       <div className="section-inner">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="text-gradient-accent">Featured Projects</span>
+            <span className="text-gradient-accent text-glow-soft">Featured Projects</span>
           </h2>
           <p className="section-subtitle">
             Showcasing innovative solutions built with modern technologies and best practices

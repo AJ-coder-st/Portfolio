@@ -57,7 +57,7 @@ const Experience = () => {
       <div className="section-inner">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="text-gradient-secondary">Experience</span>
+            <span className="text-gradient-secondary text-glow-soft">Experience</span>
           </h2>
           <p className="section-subtitle">
             Professional journey through innovative companies and challenging projects

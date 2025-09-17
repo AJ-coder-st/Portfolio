@@ -238,6 +238,14 @@
     background-clip: text;
   }
 
+  /* Subtle text glow helper (balanced for light/dark) */
+  .text-glow-soft {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.18);
+  }
+  .dark .text-glow-soft {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+  }
+
   /* Animations */
   @keyframes float {
     0%, 100% {

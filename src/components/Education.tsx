@@ -8,7 +8,7 @@ const Education = () => {
       <div className="section-inner">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="text-gradient-primary">Education</span>
+            <span className="text-gradient-primary text-glow-soft">Education</span>
           </h2>
           <p className="section-subtitle">
             Academic foundation in computer science and engineering

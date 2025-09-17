@@ -149,7 +149,7 @@ const Certifications = () => {
         <div className="section-inner">
           <div className="section-header">
             <h2 className="section-title">
-              <span className="text-gradient-primary">Certifications</span>
+              <span className="text-gradient-primary text-glow-soft">Certifications</span>
             </h2>
             <p className="section-subtitle">
               Professional certifications and achievements
@@ -175,7 +175,7 @@ const Certifications = () => {
         <div className="section-inner">
           <div className="section-header">
             <h2 className="section-title">
-              <span className="text-gradient-primary">Certifications</span>
+              <span className="text-gradient-primary text-glow-soft">Certifications</span>
             </h2>
             <p className="section-subtitle">
               Professional certifications and achievements
@@ -202,7 +202,7 @@ const Certifications = () => {
       <div className="section-inner">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="text-gradient-primary">Certifications</span>
+            <span className="text-gradient-primary text-glow-soft">Certifications</span>
           </h2>
           <p className="section-subtitle">
             Professional certifications and achievements ({certificates.length} certificates)

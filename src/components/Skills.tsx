@@ -83,7 +83,7 @@ const Skills = () => {
       <div className="section-inner">
         <div className="section-header">
           <h2 className="section-title">
-            <span className="text-gradient-hero">Skills & Expertise</span>
+            <span className="text-gradient-hero text-glow-soft">Skills & Expertise</span>
           </h2>
           <p className="section-subtitle">
             Comprehensive technical skills across modern development stack and emerging technologies
