@@ -10,7 +10,7 @@ const About = () => {
             <span className="text-gradient-primary">About Me</span>
           </h2>
           <p className="section-subtitle">
-            Passionate developer with expertise in full-stack development and modern technologies
+            Prompt engineer and AI/ML enthusiast focused on model alignment, data-driven workflows, and precise prompt design.
           </p>
         </div>
         
@@ -35,19 +35,13 @@ const About = () => {
                 Hello, I'm Bharath Waj M
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                A passionate Full-Stack Developer and Software Engineer with a strong foundation in 
-                computer science and engineering. I specialize in creating innovative solutions 
-                that bridge the gap between cutting-edge technology and real-world applications.
+                I specialize in designing effective prompts and AI workflows to deliver reliable, insightful outcomes. My focus areas include model alignment, token optimization, and LLMOps practices that improve efficiency and reduce overhead.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                With experience spanning multiple domains including web development, mobile applications, 
-                and enterprise systems, I bring a comprehensive approach to software development. 
-                My journey has taken me through exciting roles at Soul AI, DLK Technologies, and Accenture.
+                I work across the AI/ML stack—from data preparation and analysis to prompt iteration and evaluation—integrating APIs like OpenAI and leveraging tools for robust testing and debuggability.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I believe in continuous learning, clean code, and building solutions that make a 
-                meaningful impact. When I'm not coding, you'll find me exploring new technologies 
-                or contributing to open-source projects.
+                I value clarity, reproducibility, and measurable impact. Outside work, I explore emerging model capabilities and refine techniques for safer, more aligned AI systems.
               </p>
             </Card>
             

@@ -26,11 +26,10 @@ const Hero = () => {
             <span className="text-gradient-hero">Bharath Waj M</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Full-Stack Developer & Software Engineer
+            Prompt Engineer | AIML & Data Science Enthusiast
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Crafting innovative solutions with modern technologies. 
-            Passionate about creating seamless user experiences and robust backend systems.
+            Crafting intelligent solutions with AI/ML-driven workflows and modern data practices. Passionate about aligning models, optimizing prompts, and delivering impactful insights.
           </p>
         </div>
         

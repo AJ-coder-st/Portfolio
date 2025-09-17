@@ -4,28 +4,50 @@ import { Building2, Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    company: "Accenture",
-    position: "Software Engineer",
-    duration: "2024 - Present",
-    location: "India",
-    description: "Working on enterprise-level applications with focus on scalable solutions and modern development practices.",
-    skills: ["React", "Node.js", "Azure", "Microservices"]
+    company: "Soul AI",
+    position: "Prompt Engineer (Freelance)",
+    duration: "Jan 2025 – Present",
+    location: "Remote",
+    description: "Designed and optimized AI prompts for diverse applications, improving model alignment and efficiency with GPT-4 and Claude APIs. Applied token management and LLMOps techniques to enhance performance and reduce overhead; integrated OpenAI APIs with robust debugging using stack traces and test repos.",
+    skills: [
+      "Prompt Engineering",
+      "GPT-4",
+      "Claude APIs",
+      "Token Management",
+      "LLMOps",
+      "OpenAI API",
+      "Debugging",
+      "Testing"
+    ]
   },
   {
     company: "DLK Technologies",
-    position: "Full-Stack Developer",
-    duration: "2023 - 2024",
+    position: "Data Science Intern",
+    duration: "Jun 2024",
     location: "Chennai, Tamil Nadu",
-    description: "Developed and maintained web applications using modern frameworks, collaborated with cross-functional teams.",
-    skills: ["Vue.js", "Django", "PostgreSQL", "Docker"]
+    description: "Processed datasets with Python for cleaning and pattern identification to support accurate, structured prompts. Automated Power BI reporting workflows, improving real-time analysis efficiency by 40%.",
+    skills: [
+      "Python",
+      "Data Cleaning",
+      "Pattern Identification",
+      "Power BI",
+      "Automation",
+      "Reporting"
+    ]
   },
   {
-    company: "Soul AI",
-    position: "Software Developer Intern",
-    duration: "2022 - 2023",
+    company: "Accenture North America (via Forage)",
+    position: "Virtual Data Analyst Intern",
+    duration: "May 2024",
     location: "Remote",
-    description: "Contributed to AI-driven applications, gained experience in machine learning integration and web development.",
-    skills: ["Python", "Machine Learning", "FastAPI", "React"]
+    description: "Conducted multi-dataset analysis to uncover optimization strategies for simulated clients. Delivered professional reports with data visualization and predictive modeling, aligning insights to AI-driven decision-making.",
+    skills: [
+      "Data Analysis",
+      "Data Visualization",
+      "Predictive Modeling",
+      "Presentation",
+      "Insights"
+    ]
   }
 ];
 
