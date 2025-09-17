@@ -41,7 +41,7 @@ const About = () => {
                 I work across the AI/ML stack—from data preparation and analysis to prompt iteration and evaluation—integrating APIs like OpenAI and leveraging tools for robust testing and debuggability.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I value clarity, reproducibility, and measurable impact. Outside work, I explore emerging model capabilities and refine techniques for safer, more aligned AI systems.
+                I value clarity, reproducibility, and measurable impact. I’ve also built and delivered websites as a freelance developer, partnering with clients to ship performant, maintainable solutions.
               </p>
             </Card>
             

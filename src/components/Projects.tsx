@@ -8,7 +8,7 @@ const projects = [
     title: "Asset Management System with GPS",
     description: "Comprehensive asset tracking system with real-time GPS monitoring, inventory management, and automated reporting features.",
     icon: Database,
-    technologies: ["React", "Node.js", "MongoDB", "GPS API", "Express"],
+    technologies: ["React", "Node.js", "MongoDB", "GPS API", "Express", "OpenAI API", "Embedding Models"],
     features: ["Real-time tracking", "Inventory management", "Automated reports", "GPS integration"],
     gradient: "bg-gradient-primary"
   },
@@ -16,7 +16,7 @@ const projects = [
     title: "Nuts Fantasy - E-commerce Platform",
     description: "Modern e-commerce platform for nuts and dry fruits with seamless shopping experience and payment integration.",
     icon: ShoppingCart,
-    technologies: ["Vue.js", "Django", "PostgreSQL", "Stripe", "Redis"],
+    technologies: ["Vue.js", "Django", "PostgreSQL", "Stripe", "Redis", "Product Recommendations", "Prompt Tuning"],
     features: ["Product catalog", "Payment gateway", "Order tracking", "Admin dashboard"],
     gradient: "bg-gradient-secondary"
   },
@@ -24,7 +24,7 @@ const projects = [
     title: "Blood Bank Management System",
     description: "Life-saving application connecting blood donors with recipients, featuring donor management and emergency alerts.",
     icon: Heart,
-    technologies: ["React", "Firebase", "Node.js", "Express", "SMS API"],
+    technologies: ["React", "Firebase", "Node.js", "Express", "SMS API", "LLM Guardrails", "Prompt Evaluation"],
     features: ["Donor registration", "Blood type matching", "Emergency alerts", "Inventory tracking"],
     gradient: "bg-gradient-accent"
   },
@@ -32,7 +32,7 @@ const projects = [
     title: "Dress Customization App",
     description: "Interactive fashion application allowing users to customize and visualize clothing designs in real-time.",
     icon: Palette,
-    technologies: ["React Native", "Three.js", "Node.js", "MongoDB", "Image AI"],
+    technologies: ["React Native", "Three.js", "Node.js", "MongoDB", "Image AI", "CLIP Guidance", "Stable Diffusion"],
     features: ["3D visualization", "Custom designs", "Color variations", "Size recommendations"],
     gradient: "bg-gradient-hero"
   }

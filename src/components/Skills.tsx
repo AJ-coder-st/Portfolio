@@ -16,37 +16,37 @@ const skillCategories = [
     title: "Frontend Development",
     icon: Code2,
     gradient: "bg-gradient-primary",
-    skills: ["React", "Vue.js", "TypeScript", "Tailwind CSS", "Next.js", "HTML5", "CSS3", "JavaScript"]
+    skills: ["React", "Vue.js", "TypeScript", "Tailwind CSS", "Next.js", "HTML5", "CSS3", "JavaScript", "Component Accessibility"]
   },
   {
     title: "Backend Development",
     icon: Server,
     gradient: "bg-gradient-secondary",
-    skills: ["Node.js", "Django", "Express.js", "FastAPI", "Python", "Java", "REST APIs", "GraphQL"]
+    skills: ["Node.js", "Django", "Express.js", "FastAPI", "Python", "Java", "REST APIs", "GraphQL", "API Orchestration"]
   },
   {
     title: "Database & Cloud",
     icon: Database,
     gradient: "bg-gradient-accent",
-    skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "AWS", "Azure", "Docker", "Redis"]
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "AWS", "Azure", "Docker", "Redis", "Vector Stores"]
   },
   {
     title: "Mobile Development",
     icon: Smartphone,
     gradient: "bg-gradient-hero",
-    skills: ["React Native", "Flutter", "Android", "iOS", "Expo", "Mobile UI/UX"]
+    skills: ["React Native", "Flutter", "Android", "iOS", "Expo", "Mobile UI/UX", "On-device AI"]
   },
   {
     title: "Design & Tools",
     icon: Palette,
     gradient: "bg-gradient-primary",
-    skills: ["Figma", "Adobe XD", "Photoshop", "UI/UX Design", "Responsive Design", "Wireframing"]
+    skills: ["Figma", "Adobe XD", "Photoshop", "UI/UX Design", "Responsive Design", "Wireframing", "Prompt Prototyping"]
   },
   {
     title: "DevOps & Version Control",
     icon: GitBranch,
     gradient: "bg-gradient-secondary",
-    skills: ["Git", "GitHub", "GitLab", "CI/CD", "Jenkins", "Linux", "Nginx", "Apache"]
+    skills: ["Git", "GitHub", "GitLab", "CI/CD", "Jenkins", "Linux", "Nginx", "Apache", "LLMOps", "Prompt Evaluation"]
   }
 ];
 

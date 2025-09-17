@@ -22,15 +22,17 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 section-title">
-            <span className="text-gradient-hero">Bharath Waj M</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Prompt Engineer | AIML & Data Science Enthusiast
-          </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Crafting intelligent solutions with AI/ML-driven workflows and modern data practices. Passionate about aligning models, optimizing prompts, and delivering impactful insights.
-          </p>
+          <div className="inline-block rounded-2xl bg-black/40 backdrop-blur-sm px-6 py-5 shadow-card">
+            <h1 className="text-5xl md:text-7xl font-bold mb-3 section-title">
+              <span className="text-gradient-hero">Bharath Waj M</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-foreground mb-2">
+              Prompt Engineer | AIML & Data Science Enthusiast
+            </p>
+            <p className="text-base md:text-lg text-foreground/90 max-w-2xl mx-auto">
+              Crafting intelligent solutions with AI/ML-driven workflows and modern data practices. Passionate about aligning models, optimizing prompts, and delivering impactful insights.
+            </p>
+          </div>
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
