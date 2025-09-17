@@ -28,7 +28,7 @@ const skillCategories = [
     title: "Database & Cloud",
     icon: Database,
     gradient: "bg-gradient-accent",
-    skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "AWS", "Azure", "Docker", "Redis", "Vector Stores"]
+    skills: ["MongoDB", "PostgreSQL", "MySQL", "Firebase", "AWS", "Azure", "Docker", "Redis", "Vector Stores", "Data Analysis"]
   },
   {
     title: "Mobile Development",
@@ -40,7 +40,7 @@ const skillCategories = [
     title: "Design & Tools",
     icon: Palette,
     gradient: "bg-gradient-primary",
-    skills: ["Figma", "Adobe XD", "Photoshop", "UI/UX Design", "Responsive Design", "Wireframing", "Prompt Prototyping"]
+    skills: ["Figma", "Adobe XD", "Photoshop", "UI/UX Design", "Responsive Design", "Wireframing", "Prompt Prototyping", "Prompt Engineering"]
   },
   {
     title: "DevOps & Version Control",
