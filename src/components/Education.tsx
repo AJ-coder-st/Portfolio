@@ -37,10 +37,10 @@ const Education = () => {
                 <h4 className="text-xl font-semibold text-foreground mb-3">
                   Panimalar Engineering College
                 </h4>
-                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                <div className="grid md:grd-cols-2 gap-4 mb-4">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="w-4 h-4" />
-                    <span>2021 - 2025</span>
+                    <span>2022 - 2026</span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPin className="w-4 h-4" />

@@ -48,7 +48,7 @@ const About = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
               <Card className="p-6 bg-gradient-card border-border/50 text-center hover-scale transition-smooth">
-                <div className="text-3xl font-bold text-gradient-primary mb-2">3+</div>
+                <div className="text-3xl font-bold text-gradient-primary mb-2">2+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </Card>
               <Card className="p-6 bg-gradient-card border-border/50 text-center hover-scale transition-smooth">
